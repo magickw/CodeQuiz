@@ -31,5 +31,4 @@ The link to the deployed application is: https://magickw.github.io/CodeQuiz/
 # License
 This project is licensed under the MIT License
 
-# Acknowledgments
 

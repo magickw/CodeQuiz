@@ -69,7 +69,7 @@ function render(questionIndex) {
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-    // New for each for question choices
+
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
@@ -78,13 +78,12 @@ function render(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 }
-// Compare choices with answer
+// Compare choices with answers
 function compare(event) {
     var element = event.target;
     if (element.matches("li")) {
         var createDiv = document.createElement("div");
         createDiv.setAttribute("id", "createDiv");
-        // Correct condition 
         if (element.textContent == questions[questionIndex].answer) {
             score++;
             createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
@@ -130,7 +129,6 @@ function allDone() {
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
         createP.textContent = "Your final score is: " + timeRemaining;
-
         questionsDiv.appendChild(createP2);
     }
 
@@ -154,7 +152,6 @@ function allDone() {
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
     createSubmit.textContent = "Submit";
-
     questionsDiv.appendChild(createSubmit);
 
     // Event listener to capture initials and local storage for initials and score
@@ -162,9 +159,7 @@ function allDone() {
         var initials = createInput.value;
 
         if (initials === null) {
-
             console.log("No value entered!");
-
         } else {
             var finalScore = {
                 initials: initials,

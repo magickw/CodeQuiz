@@ -2,7 +2,7 @@
 This project is to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. It will have a clean, polished, and responsive user interface. 
 
 # Getting Started
-Since this portfolio website is used for demonstration purpose only, some information like my Twitter and Facebook pages and the latest Resume are not provided. I am trying to add coding experience to my Resume. It's inpropriate to provide the current Resume which is mostly medical translation related at this moment. They may be provided in the future.
+When the user clicks the Star Quiz button, the countdown timer starts and the user will be presented with a question. The user will choose an answer and will be alerted wether they have selected the right answer. If the user answers incorrectly, the time will be deducted off by 10 seconds from the timer. The game is over when all questions are answered or the timer reaches 0. The user can input their initials and their scores. 
 
 # Demo
 <img src="assets\demo.gif" alt="screenshot" />

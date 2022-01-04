@@ -2,7 +2,7 @@ var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
 var goBack = document.querySelector("#goBack");
 
-
+// Add event listener for Clear button
 clear.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
@@ -18,7 +18,7 @@ if (allScores !== null) {
         highScore.appendChild(createLi);
     }
 }
-
+// Add event listener for Go Back button
 goBack.addEventListener("click", function () {
     window.location.replace("./index.html");
 });

@@ -96,6 +96,7 @@ function compare(event) {
     }
     questionIndex++;
 
+//Alerting game over when all questions are answered
     if (questionIndex >= questions.length) {
         allDone();
         createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";

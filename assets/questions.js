@@ -34,7 +34,6 @@ var questionIndex = 0;
 var timeLeft = document.querySelector("#timeLeft");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
-var box = document.querySelector("#box");
 
 // 15 seconds per question:
 var secondsLeft = 75;
@@ -170,6 +169,7 @@ function allDone() {
         } else {
             var finalScore = {
                 initials: initials,
+                // The score is converted into time remaining.
                 score: timeRemaining
             }
             console.log(finalScore);

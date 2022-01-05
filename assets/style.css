@@ -71,9 +71,8 @@ button {
 
 
 textarea {
-    width: 70%;
-    margin: 5px;
-    border: solid black;
+    width: 90%;
+    margin: 10px;
 }
 
 #Submit {
@@ -94,9 +93,9 @@ label {
     margin-right: 10px;
 }
 input {
-    margin-bottom: 20px;
-    width: 50%;
-    border: 1px solid white;
+    margin-bottom: 10px;
+    width: 30%;
+    border: 1px solid black;
 }
 
 h1 {
@@ -118,7 +117,7 @@ li {
     border-top: 1px solid white;
 }
 
-#box {
+#quizBlock {
     position: absolute;
     left: 30%;
     top: 20%;
@@ -131,7 +130,7 @@ li {
         body {
             max-width: 786px;
         }
-    #box {
+    #quizBlock {
         position: absolute;
         left: 20%;
     }
@@ -139,10 +138,10 @@ li {
     a {
         margin-left: 20%;
     }
-        #goBack {
+        #back {
             
             position: relative;
-            left: 55%;
+            left: 50%;
         }
 
         #clear {
@@ -157,12 +156,12 @@ li {
      body {
             min-width: 640px;
         }
-    #box {
+    #quizBlock {
         position: absolute;
-        left: 10%;
+        left: 5%;
     }
       a {
-          margin-left: 10%;
+          margin-left: 5%;
       }
 
      

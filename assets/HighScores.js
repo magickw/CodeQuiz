@@ -1,18 +1,22 @@
 var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
 var back = document.querySelector("#back");
-
-var allScores = localStorage.getItem("allScores");
-allScores = JSON.parse(allScores);
+var allScores = JSON.parse(localStorage.getItem("allScores"));
 
 // Create a list of highscores
-if (allScores !== null) {
+function displayScores() {
+    if (allScores !== null) {
+    var scoreList = document.createElement("ol");
     for (var i = 0; i < allScores.length; i++) {
-        var liCreate = document.createElement("li");
-        liCreate.textContent = allScores[i].initials + " " + allScores[i].score;
-        highScore.appendChild(liCreate);
+        var scoreEntry = document.createElement("li");
+        scoreEntry.textContent = allScores[i].initials + " " + allScores[i].score;
+        scoreList.appendChild(scoreEntry);
     }
+    highScore.appendChild(scoreList);
 }
+};
+
+displayScores();
 
 // Add event listener for Clear button
 clear.addEventListener("click", function () {

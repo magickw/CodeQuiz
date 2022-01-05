@@ -164,7 +164,7 @@ function allDone() {
         var initials = input.value;
      //In case of no intials input
         if (initials === null) {
-            console.log("No value entered!");
+            alert("No value entered!");
         } else {
             var finalScore = {
                 initials: initials,

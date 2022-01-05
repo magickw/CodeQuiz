@@ -142,7 +142,7 @@ function allDone() {
 
     // Creates a label
     var label = document.createElement("label");
-    label.setAttribute("id", "createLabel");
+    label.setAttribute("id", "label");
     label.textContent = "Enter your initials: ";
 
     questionsDiv.appendChild(label);
@@ -164,7 +164,7 @@ function allDone() {
 
     // Event listener to capture initials and local storage for initials and score
     submit.addEventListener("click", function () {
-        var initials = createInput.value;
+        var initials = input.value;
      //In case of no intials input
         if (initials === null) {
             console.log("No value entered!");

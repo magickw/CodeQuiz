@@ -1,6 +1,6 @@
 var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
-var goBack = document.querySelector("#goBack");
+var goBack = document.querySelector("#back");
 
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
@@ -23,7 +23,7 @@ clear.addEventListener("click", function () {
 });
 
 // Add event listener for Go Back button
-goBack.addEventListener("click", function () {
+back.addEventListener("click", function () {
     //Redirect the current URL to index.html on the same window
     window.location.replace("./index.html");
 });

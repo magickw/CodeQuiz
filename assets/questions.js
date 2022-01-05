@@ -31,13 +31,13 @@ var questions = [
 // Declares variables
 var score = 0;
 var questionIndex = 0;
-var currentTime = document.querySelector("#currentTime");
+var timeLeft = document.querySelector("#timeLeft");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var box = document.querySelector("#box");
 
 // 15 seconds per question:
-var secondsLeft = 76;
+var secondsLeft = 75;
 // Holds interval time
 var holdInterval = 0;
 // Penalty time
@@ -50,19 +50,19 @@ timer.addEventListener("click", function () {
     if (holdInterval === 0) {
         holdInterval = setInterval(function () {
             secondsLeft--;
-            currentTime.textContent = "Time: " + secondsLeft + "s";
+            timeLeft.textContent = "Time: " + secondsLeft + "s";
             //When timer reaches 0
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
                 allDone();
-                currentTime.textContent = "Time's up!";
+                timeLeft.textContent = "Time's up!";
             }
         }, 1000);
     }
     render(questionIndex);
 });
 
-
+// Display the questions
 function render(questionIndex) {
     // Clear text content
     questionsDiv.innerHTML = "";
@@ -115,7 +115,7 @@ function compare(event) {
 function allDone() {
     //Clear the questions and current time
     questionsDiv.innerHTML = "";
-    currentTime.innerHTML = "";
+    timeLeft.innerHTML = "";
 
     // Create a heading
     var createH1 = document.createElement("h1");

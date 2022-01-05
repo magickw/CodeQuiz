@@ -18,7 +18,7 @@
     font-weight: bolder;
 }
 
-#currentTime {
+#timeLeft {
     float: right;
     margin-top: 5px;
     margin-right: 5px;
@@ -27,7 +27,7 @@
 
 }
 
-#goBack {
+#back {
     background-color: purple;
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-#goBack:hover {
+#back:hover {
 	background-color: blue;
 }
 

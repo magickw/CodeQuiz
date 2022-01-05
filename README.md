@@ -9,10 +9,11 @@ The game is over when all questions are answered or the timer reaches 0. The use
 The user can input their initials. The webpage stores all initials and scores until the user clears them. And the user can also retake the quiz by clicking the *Go Back* button.
 
 # Process
-# Step 1. Set up the structure, including the starter html, js and css files.<br>
-# Step 2. Show the questions and choices. <br>
+Step 1. Set up the structure, including the starter html, js and css files.<br>
+In this step, we need to sets of html and js files.
+Step 2. Show the questions and choices. <br>
 In this step, the questions are listed as an array of varibles, i.e. var = questions [], and indexed, i.e. var = questionsIndex []. When the user starts the quiz, the timer event listener executes, showing the time remaining.
-# Step 3. Show the results.<br>
+Step 3. Show the results.<br>
 
 # Demo
 Note: the actual results of the deployed application may be slightly different from the Demo as shown below due to the differences in CSS: <br>

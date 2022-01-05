@@ -22,6 +22,9 @@
     float: right;
     margin-top: 5px;
     margin-right: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+
 }
 
 #goBack {
@@ -65,7 +68,6 @@ button {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
     transition: 0.3s;
 }
-
 
 
 textarea {

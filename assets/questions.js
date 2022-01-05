@@ -32,7 +32,7 @@ var questions = [
 var score = 0;
 var questionIndex = 0;
 var timeLeft = document.querySelector("#timeLeft");
-var timer = document.querySelector("#startTime");
+var timer = document.querySelector("#start");
 var questionsDiv = document.querySelector("#questionsDiv");
 
 // 15 seconds per question:

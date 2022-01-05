@@ -1,4 +1,4 @@
-#startTime {
+#start {
     background-color: purple;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 30%;
@@ -7,7 +7,7 @@
     color: white;
 }
 
-#startTime:hover {
+#start:hover {
 	background-color: blue;
 }
 
@@ -96,6 +96,10 @@ li {
     width: 80%;
     font-size: 20px;
     color: white;
+}
+
+li:hover {
+	background-color: blue;
 }
 
 #createDiv {

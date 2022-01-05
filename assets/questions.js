@@ -90,7 +90,7 @@ function compare(event) {
         //If the question answered correctly
         if (element.textContent == questions[questionIndex].answer) {
             score++;
-            createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
+            createDiv.textContent = "Correct!";
         } else {
             // -10 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;

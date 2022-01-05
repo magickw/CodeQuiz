@@ -12,7 +12,7 @@ The user can input their initials. The webpage stores all initials and scores un
 Step 1. Set up the structure, including the starter html, js and css files.<br>
 In this step, we need to sets of html and js files.
 Step 2. Show the questions and choices. <br>
-In this step, the questions are listed as an array of varibles, i.e. var = questions [], and indexed, i.e. var = questionsIndex []. When the user starts the quiz, the timer event listener executes, showing the time remaining.
+In this step, the questions are listed as an array of varibles, i.e. var = questions [], and indexed, i.e. var = questionsIndex []. When the user starts the quiz, the timer event listener executes, showing the time remaining and it alerts "Time's up!" when the timer reaches 0. The user is presented with each question according to the question index. The initial score is 0. When a question is answered correctly, then score++. If it's answered incorrectly, then the time left is deducted by 10 seconds.
 Step 3. Show the results.<br>
 
 # Demo

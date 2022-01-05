@@ -66,7 +66,7 @@ function render(questionIndex) {
     // Clear text content
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
-    // For loop to loop through in array
+    // For loops to loop through the questions in array
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
@@ -83,6 +83,7 @@ function render(questionIndex) {
 }
 // Compare choices with answers
 function compare(event) {
+    // event.target refers to the clicked <li> element
     var element = event.target;
     if (element.matches("li")) {
         var createDiv = document.createElement("div");
@@ -92,18 +93,19 @@ function compare(event) {
             score++;
             createDiv.textContent = "Correct!";
         } else {
-            // -10 seconds off secondsLeft for wrong answers
+            // 10 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
         }
 
     }
+    // Then present the next question
     questionIndex++;
 
 //Alerting game over when all questions are answered
     if (questionIndex >= questions.length) {
         allDone();
-        createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+        createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " questions correct!";
     } else {
         render(questionIndex);
     }
@@ -112,56 +114,56 @@ function compare(event) {
 }
 // A new page will append when All Done
 function allDone() {
-    //Clear the questions and current time
+    //Clears the questions and current time
     questionsDiv.innerHTML = "";
     timeLeft.innerHTML = "";
 
-    // Create a heading
-    var createH1 = document.createElement("h1");
-    createH1.setAttribute("id", "createH1");
-    createH1.textContent = "All Done!"
+    // Creates a heading
+    var H1 = document.createElement("h1");
+    H1.setAttribute("id", "H1");
+    H1.textContent = "All Done!"
 
-    questionsDiv.appendChild(createH1);
+    questionsDiv.appendChild(H1);
 
-    // Create a paragraph
-    var createP = document.createElement("p");
-    createP.setAttribute("id", "createP");
+    // Creates a paragraph
+    var P = document.createElement("p");
+    P.setAttribute("id", "P");
 
-    questionsDiv.appendChild(createP);
+    questionsDiv.appendChild(P);
 
     // Calculates time remaining and replaces it with score
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
-        var createP2 = document.createElement("p");
+        var P2 = document.createElement("p");
         clearInterval(holdInterval);
-        createP.textContent = "Your final score is: " + timeRemaining;
-        questionsDiv.appendChild(createP2);
+        P2.textContent = "Your final score is: " + timeRemaining;
+        questionsDiv.appendChild(P2);
     }
 
-    // Label
-    var createLabel = document.createElement("label");
-    createLabel.setAttribute("id", "createLabel");
-    createLabel.textContent = "Enter your initials: ";
+    // Creates a label
+    var label = document.createElement("label");
+    label.setAttribute("id", "createLabel");
+    label.textContent = "Enter your initials: ";
 
-    questionsDiv.appendChild(createLabel);
+    questionsDiv.appendChild(label);
 
-    // User's input area
-    var createInput = document.createElement("input");
-    createInput.setAttribute("type", "text");
-    createInput.setAttribute("id", "initials");
-    createInput.textContent = "";
+    // Creates a user's input area
+    var input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.setAttribute("id", "initials");
+    input.textContent = "";
 
-    questionsDiv.appendChild(createInput);
+    questionsDiv.appendChild(input);
 
     // Submit button
-    var createSubmit = document.createElement("button");
-    createSubmit.setAttribute("type", "submit");
-    createSubmit.setAttribute("id", "Submit");
-    createSubmit.textContent = "Submit";
-    questionsDiv.appendChild(createSubmit);
+    var submit = document.createElement("button");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("id", "Submit");
+    submit.textContent = "Submit";
+    questionsDiv.appendChild(submit);
 
     // Event listener to capture initials and local storage for initials and score
-    createSubmit.addEventListener("click", function () {
+    submit.addEventListener("click", function () {
         var initials = createInput.value;
      //In case of no intials input
         if (initials === null) {

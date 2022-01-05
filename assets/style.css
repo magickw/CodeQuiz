@@ -1,5 +1,6 @@
 #startTime {
     background-color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 30%;
     padding: 10px 20px;
     font-size: 25px;
@@ -12,6 +13,9 @@
 
 #questionsDiv {
     margin: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 #currentTime {
@@ -22,10 +26,11 @@
 
 #goBack {
     background-color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     cursor: pointer;
     padding: 10px;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     top: 30%;
     left: 55%;
@@ -39,10 +44,11 @@
 
 #clear {
     background-color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     cursor: pointer;
     padding: 10px;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     top: 30%;
     right: 5%;
@@ -63,16 +69,18 @@ button {
 
 
 textarea {
-    width: 95%;
-    margin: 10px;
+    width: 70%;
+    margin: 5px;
+    border: solid black;
 }
 
 #Submit {
     background-color: purple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 33%;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 }
 

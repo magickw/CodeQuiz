@@ -5,8 +5,13 @@
     font-size: 25px;
     color: white;
 }
+
+#startTime:hover {
+	background-color: blue;
+}
+
 #questionsDiv {
-    margin: 20px;
+    margin: 30px;
 }
 
 #currentTime {
@@ -28,7 +33,9 @@
     text-align: center;
 }
 
-
+#goBack:hover {
+	background-color: blue;
+}
 
 #clear {
     background-color: purple;
@@ -42,12 +49,18 @@
     text-align: center;
 }
 
+#clear:hover {
+	background-color: blue;
+}
+
 button {
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
     transition: 0.3s;
 }
+
+
 
 textarea {
     width: 95%;
@@ -63,13 +76,17 @@ textarea {
     color: white;
 }
 
+#Submit:hover {
+	background-color: blue;
+}
+
 label {
     margin-right: 10px;
 }
 input {
     margin-bottom: 20px;
     width: 50%;
-    border: 1px solid lightgray;
+    border: 1px solid white;
 }
 
 h1 {

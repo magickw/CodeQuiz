@@ -34,7 +34,7 @@ var questionIndex = 0;
 var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
-var card = document.querySelector("#card");
+var box = document.querySelector("#box");
 
 // 15 seconds per question:
 var secondsLeft = 76;
@@ -64,9 +64,10 @@ timer.addEventListener("click", function () {
 
 
 function render(questionIndex) {
+    // Clear text content
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
-    // For loops to loop through in array
+    // For loop to loop through in array
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
@@ -153,7 +154,7 @@ function allDone() {
 
     questionsDiv.appendChild(createInput);
 
-    // submit
+    // Submit button
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");

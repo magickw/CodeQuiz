@@ -1,15 +1,15 @@
 var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
 var back = document.querySelector("#back");
-var allScores = JSON.parse(localStorage.getItem("allScores"));
+var storedScores = JSON.parse(localStorage.getItem("storedScores"));
 
 // Create a list of highscores
 function displayScores() {
-    if (allScores !== null) {
+    if (storedScores !== null) {
     var scoreList = document.createElement("ol");
-    for (var i = 0; i < allScores.length; i++) {
+    for (var i = 0; i < storedScores.length; i++) {
         var scoreEntry = document.createElement("li");
-        scoreEntry.textContent = allScores[i].initials + " " + allScores[i].score;
+        scoreEntry.textContent = storedScores[i].initials + " " + storedScores[i].score;
         scoreList.appendChild(scoreEntry);
     }
     highScore.appendChild(scoreList);

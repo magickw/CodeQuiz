@@ -173,16 +173,16 @@ function allDone() {
             }
             console.log(finalScore);
             //Local storage for initials and scores
-            var allScores = localStorage.getItem("allScores");
-            if (allScores === null) {
-                allScores = [];
+            var storedScores = localStorage.getItem("storedScores");
+            if (storedScores === null) {
+                storedScores = [];
             } else {
-                allScores = JSON.parse(allScores);
+                storedScores = JSON.parse(storedScores);
             }
             // Add new score to the end of the array of scores
-            allScores.push(finalScore);
-            var newScore = JSON.stringify(allScores);
-            localStorage.setItem("allScores", newScore);
+            storedScores.push(finalScore);
+            var newScore = JSON.stringify(storedScores);
+            localStorage.setItem("storedScores", newScore);
             window.location.replace("./HighScores.html");
         }
     });

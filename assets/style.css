@@ -1,4 +1,3 @@
-
 #startTime {
     background-color: purple;
     margin-left: 30%;
@@ -12,6 +11,8 @@
 
 #currentTime {
     float: right;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 #goBack {

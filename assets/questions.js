@@ -110,19 +110,20 @@ function compare(event) {
     questionsDiv.appendChild(createDiv);
 
 }
-// All done will append last page
+// A new page will append when All Done
 function allDone() {
+    //Clear the questions and current time
     questionsDiv.innerHTML = "";
     currentTime.innerHTML = "";
 
-    // Heading:
+    // Create a heading
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "All Done!"
 
     questionsDiv.appendChild(createH1);
 
-    // Paragraph
+    // Create a paragraph
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
@@ -144,7 +145,7 @@ function allDone() {
 
     questionsDiv.appendChild(createLabel);
 
-    // input
+    // User's input area
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");

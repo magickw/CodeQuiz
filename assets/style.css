@@ -26,7 +26,6 @@
     left: 55%;
     width: auto;
     text-align: center;
-    text-decoration: none;
 }
 
 
@@ -88,7 +87,7 @@ li {
 }
 
 #createDiv {
-    margin-top: 30px;
+    margin-top: 20px;
     border-top: 1px solid white;
 }
 

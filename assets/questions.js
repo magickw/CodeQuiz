@@ -123,13 +123,11 @@ function allDone() {
     var h1 = document.createElement("h1");
     h1.setAttribute("id", "h1");
     h1.textContent = "All Done!"
-
     questionsDiv.appendChild(h1);
 
     // Creates a paragraph
     var p = document.createElement("p");
     p.setAttribute("id", "p");
-
     questionsDiv.appendChild(p);
 
     // Calculates time remaining and replaces it with score
@@ -145,7 +143,6 @@ function allDone() {
     var label = document.createElement("label");
     label.setAttribute("id", "label");
     label.textContent = "Enter your initials: ";
-
     questionsDiv.appendChild(label);
 
     // Creates a user's input area
@@ -153,10 +150,9 @@ function allDone() {
     input.setAttribute("type", "text");
     input.setAttribute("id", "initials");
     input.textContent = "";
-
     questionsDiv.appendChild(input);
 
-    // Submit button
+    // Creates a Submit button
     var submitBtn = document.createElement("button");
     submitBtn.setAttribute("type", "submit");
     submitBtn.setAttribute("id", "submit");
@@ -183,6 +179,7 @@ function allDone() {
             } else {
                 allScores = JSON.parse(allScores);
             }
+            // Add new score to the end of the array of scores
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);

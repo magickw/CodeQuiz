@@ -1,3 +1,5 @@
+//List the questions including their titles, choices and answers in an array
+
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
@@ -158,7 +160,7 @@ function allDone() {
     // Event listener to capture initials and local storage for initials and score
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
-
+//In case of no intials input
         if (initials === null) {
             console.log("No value entered!");
         } else {

@@ -72,7 +72,7 @@ function render(questionIndex) {
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
     }
-
+    // Executes a provided function once for each array element.
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
@@ -86,16 +86,16 @@ function compare(event) {
     // event.target refers to the clicked <li> element
     var element = event.target;
     if (element.matches("li")) {
-        var createDiv = document.createElement("div");
-        createDiv.setAttribute("id", "createDiv");
+        var alert = document.createElement("div");
+        alert.setAttribute("id", "alert");
         //If the question answered correctly
         if (element.textContent == questions[questionIndex].answer) {
             score++;
-            createDiv.textContent = "Correct!";
+            alert.textContent = "Correct!";
         } else {
             // 10 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
-            createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
+            alert.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
         }
 
     }
@@ -105,11 +105,11 @@ function compare(event) {
 //Alerting game over when all questions are answered
     if (questionIndex >= questions.length) {
         allDone();
-        createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " questions correct!";
+        alert.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " questions correct!";
     } else {
         render(questionIndex);
     }
-    questionsDiv.appendChild(createDiv);
+    questionsDiv.appendChild(alert);
 
 }
 
@@ -163,7 +163,7 @@ function allDone() {
     submitBtn.textContent = "Submit";
     questionsDiv.appendChild(submitBtn);
 
-    // Event listener to capture initials and local storage for initials and scores
+    // Event listener to capture initials
     submitBtn.addEventListener("click", function () {
         var initials = input.value;
      //In case of no intials input
@@ -176,6 +176,7 @@ function allDone() {
                 score: timeRemaining
             }
             console.log(finalScore);
+            //Local storage for initials and scores
             var allScores = localStorage.getItem("allScores");
             if (allScores === null) {
                 allScores = [];

@@ -8,9 +8,9 @@ allScores = JSON.parse(allScores);
 // Create a list of highscores
 if (allScores !== null) {
     for (var i = 0; i < allScores.length; i++) {
-        var createLi = document.createElement("li");
-        createLi.textContent = allScores[i].initials + " " + allScores[i].score;
-        highScore.appendChild(createLi);
+        var liCreate = document.createElement("li");
+        liCreate.textContent = allScores[i].initials + " " + allScores[i].score;
+        highScore.appendChild(liCreate);
     }
 }
 

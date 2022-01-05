@@ -42,7 +42,7 @@ var holdInterval = 0;
 // Penalty time
 var penalty = 10;
 // Creates list elements
-var ulCreate = document.createElement("ul");
+var createUl = document.createElement("ul");
 
 // Timer Event listener
 timer.addEventListener("click", function () {
@@ -65,7 +65,7 @@ timer.addEventListener("click", function () {
 function render(questionIndex) {
     // Clear text content
     questionsDiv.innerHTML = "";
-    ulCreate.innerHTML = "";
+    createUl.innerHTML = "";
     // For loops to loop through the questions in array
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[questionIndex].title;
@@ -76,8 +76,8 @@ function render(questionIndex) {
     userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        questionsDiv.appendChild(ulCreate);
-        ulCreate.appendChild(listItem);
+        questionsDiv.appendChild(createUl);
+        createUl.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     })
 }
@@ -112,6 +112,7 @@ function compare(event) {
     questionsDiv.appendChild(createDiv);
 
 }
+
 // A new page will append when All Done
 function allDone() {
     //Clears the questions and current time
@@ -119,25 +120,25 @@ function allDone() {
     timeLeft.innerHTML = "";
 
     // Creates a heading
-    var H1 = document.createElement("h1");
-    H1.setAttribute("id", "H1");
-    H1.textContent = "All Done!"
+    var h1 = document.createElement("h1");
+    h1.setAttribute("id", "h1");
+    h1.textContent = "All Done!"
 
-    questionsDiv.appendChild(H1);
+    questionsDiv.appendChild(h1);
 
     // Creates a paragraph
-    var P = document.createElement("p");
-    P.setAttribute("id", "P");
+    var p = document.createElement("p");
+    p.setAttribute("id", "p");
 
-    questionsDiv.appendChild(P);
+    questionsDiv.appendChild(p);
 
     // Calculates time remaining and replaces it with score
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
-        var P2 = document.createElement("p");
+        var p2 = document.createElement("p");
         clearInterval(holdInterval);
-        P2.textContent = "Your final score is: " + timeRemaining;
-        questionsDiv.appendChild(P2);
+        p2.textContent = "Your final score is: " + timeRemaining;
+        questionsDiv.appendChild(p2);
     }
 
     // Creates a label
@@ -156,14 +157,14 @@ function allDone() {
     questionsDiv.appendChild(input);
 
     // Submit button
-    var submit = document.createElement("button");
-    submit.setAttribute("type", "submit");
-    submit.setAttribute("id", "Submit");
-    submit.textContent = "Submit";
-    questionsDiv.appendChild(submit);
+    var submitBtn = document.createElement("button");
+    submitBtn.setAttribute("type", "submit");
+    submitBtn.setAttribute("id", "submit");
+    submitBtn.textContent = "Submit";
+    questionsDiv.appendChild(submitBtn);
 
-    // Event listener to capture initials and local storage for initials and score
-    submit.addEventListener("click", function () {
+    // Event listener to capture initials and local storage for initials and scores
+    submitBtn.addEventListener("click", function () {
         var initials = input.value;
      //In case of no intials input
         if (initials === null) {

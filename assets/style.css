@@ -63,31 +63,17 @@
 }
 
 button {
+    background-color: purple;
     border-radius: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
     transition: 0.3s;
-}
-
-
-textarea {
-    width: 90%;
-    margin: 10px;
-}
-
-#Submit {
-    background-color: purple;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 33%;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
 }
 
-#Submit:hover {
-	background-color: blue;
-}
+
 
 label {
     margin-right: 10px;

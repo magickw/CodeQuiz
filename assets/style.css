@@ -119,20 +119,17 @@ li:hover {
 
 @media screen and (max-width: 786px) {
     body {
-            max-width: 786px;
+            width: 90%;
         }
     #quiz-container {
         position: absolute;
         left: 20%;
     }
 
-    a {
-        margin-left: 20%;
-    }
         #back {
             
             position: relative;
-            left: 60%;
+            left: 55%;
         }
 
         #clear {
@@ -145,15 +142,13 @@ li:hover {
         
     @media screen and (max-width: 640px) {
      body {
-        min-width: 450px;
+        width: 90%;
         }
     #quiz-container {
         position: absolute;
         left: 5%;
     }
-      a {
-          margin-left: 5%;
-      }
+
 
      
 }

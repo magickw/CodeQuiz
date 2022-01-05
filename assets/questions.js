@@ -34,7 +34,7 @@ var questionIndex = 0;
 var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
-var wrapper = document.querySelector("#wrapper");
+var card = document.querySelector("#card");
 
 // 15 seconds per question:
 var secondsLeft = 76;
@@ -42,7 +42,7 @@ var secondsLeft = 76;
 var holdInterval = 0;
 // Penalty time
 var penalty = 10;
-// Creates new element
+// Creates list elements
 var ulCreate = document.createElement("ul");
 
 // Timer Event listener
@@ -51,6 +51,7 @@ timer.addEventListener("click", function () {
         holdInterval = setInterval(function () {
             secondsLeft--;
             currentTime.textContent = "Time: " + secondsLeft + "s";
+            //When timer reaches 0
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
                 allDone();

@@ -87,11 +87,11 @@ li {
 }
 
 #createDiv {
-    margin-top: 20px;
-    border-top: 1px solid lightgray;
+    margin-top: 30px;
+    border-top: 1px solid white;
 }
 
-#card {
+#box {
     position: absolute;
     left: 30%;
     top: 20%;

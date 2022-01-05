@@ -4,6 +4,7 @@ var goBack = document.querySelector("#goBack");
 
 var allScores = localStorage.getItem("allScores");
 allScores = JSON.parse(allScores);
+
 // Create a list of highscores
 if (allScores !== null) {
     for (var i = 0; i < allScores.length; i++) {
@@ -15,11 +16,14 @@ if (allScores !== null) {
 
 // Add event listener for Clear button
 clear.addEventListener("click", function () {
+    //Clear all highscores
     localStorage.clear();
+    //Reloads the current URL, like the Refresh button
     location.reload();
 });
 
 // Add event listener for Go Back button
 goBack.addEventListener("click", function () {
+    //Redirect the current URL to index.html on the same window
     window.location.replace("./index.html");
 });

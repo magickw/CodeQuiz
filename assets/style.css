@@ -36,7 +36,7 @@
     font-size: 20px;
     color: white;
     top: 30%;
-    left: 65%;
+    left: 55%;
     width: auto;
     text-align: center;
 }
@@ -55,7 +55,6 @@
     color: white;
     top: 30%;
     right: 5%;
-    width: auto;
     text-align: center;
 }
 
@@ -109,7 +108,7 @@ li:hover {
     margin-top: 25px;
 }
 
-#container {
+#quiz-container {
     position: absolute;
     left: 30%;
     top: 20%;
@@ -120,9 +119,9 @@ li:hover {
 
 @media screen and (max-width: 786px) {
     body {
-            width: 90%;
+            max-width: 786px;
         }
-    #container {
+    #quiz-container {
         position: absolute;
         left: 20%;
     }
@@ -146,9 +145,9 @@ li:hover {
         
     @media screen and (max-width: 640px) {
      body {
-        width: 90%;
+        min-width: 450px;
         }
-    #container {
+    #quiz-container {
         position: absolute;
         left: 5%;
     }

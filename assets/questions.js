@@ -1,5 +1,5 @@
-//List the questions including their titles, choices and answers in an array
-
+//List the questions including their titles, 
+//choices and answers in an array.
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
@@ -87,6 +87,7 @@ function compare(event) {
     if (element.matches("li")) {
         var createDiv = document.createElement("div");
         createDiv.setAttribute("id", "createDiv");
+        //If the question answered correctly
         if (element.textContent == questions[questionIndex].answer) {
             score++;
             createDiv.textContent = "Correct! The answer is:  " + questions[questionIndex].answer;
@@ -161,7 +162,7 @@ function allDone() {
     // Event listener to capture initials and local storage for initials and score
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
-//In case of no intials input
+     //In case of no intials input
         if (initials === null) {
             console.log("No value entered!");
         } else {

@@ -4,9 +4,12 @@ This project is to build a timed coding quiz with multiple-choice questions. Thi
 # Getting Started
 When the user clicks the *Star Quiz* button, the countdown timer starts and the user will be presented with a question with multiple choices. The user will choose an answer and will be alerted wether they have selected the right answer. If the user answers incorrectly, the time will be deducted off by 10 seconds from the timer. After a question is answered, the user will be presented with another question. 
 
-The game is over when all questions are answered or the timer reaches 0. The user can input their initials and their scores. The webpage stores all initials and scores until the user clears them. And the user can also retake the quiz by clicking the *Go Back* button.
+The game is over when all questions are answered or the timer reaches 0. The user will receive a final score which actually is the time remaining in seconds. Therefore, the quicker and more accurate the users answer, the higher theirscores.
+
+The user can input their initials. The webpage stores all initials and scores until the user clears them. And the user can also retake the quiz by clicking the *Go Back* button.
 
 # Demo
+Note: the actual results of the deployed application maybe slightly different from the Demo as shown below:
 <img src="assets\demo.gif" alt="screenshot" />
 
 

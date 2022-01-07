@@ -53,7 +53,7 @@ timer.addEventListener("click", function () {
             //When timer reaches 0
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
-                allDone();
+                endGame();
                 timeLeft.textContent = "Time's up!";
             }
         }, 1000);
@@ -104,7 +104,7 @@ function compare(event) {
 
 //Alerting game over when all questions are answered
     if (questionIndex >= questions.length) {
-        allDone();
+        endGame();
         alert.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " questions correct!";
     } else {
         render(questionIndex);
@@ -114,7 +114,7 @@ function compare(event) {
 }
 
 // A new page will append when All Done
-function allDone() {
+function endGame() {
     //Clears the questions and current time
     questionsDiv.innerHTML = "";
     timeLeft.innerHTML = "";

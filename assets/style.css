@@ -117,6 +117,14 @@ li:hover {
     border: 2px solid black;
 }
 
+footer {
+    border-top: 10px;
+    padding: 20px;
+    border-bottom: 10px;
+    justify-content: center;
+  
+  }
+
 @media screen and (max-width: 786px) {
     body {
             width: 90%;
